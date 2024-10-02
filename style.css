@@ -1,0 +1,346 @@
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 0;
+}
+ 
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+header h1 i {
+    color: #ff6347;
+    margin-right: 8px;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline-block;
+    float: right;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+.hero {
+    background: url('https://plus.unsplash.com/premium_photo-1661963123153-5471a95b7042?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+ 
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-size: cover; */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 1;
+
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.hero button:hover {
+    background: #e55342;
+}
+
+/* Hotels Section */
+#hotels {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#hotels h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hotel-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hotel-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hotel-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.hotel-card p {
+    color: #666;
+}
+
+.hotel-btn {
+    padding: 10px 20px;
+    background: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.hotel-btn:hover {
+    background: #e55342;
+}
+
+/* Booking Form */
+#booking {
+    background: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#booking h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#booking form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#booking form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+#booking form input, #booking form select {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#booking form button {
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#booking form button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+footer .socials a:hover {
+    color: #ff6347;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    header nav ul {
+        display: none; /* Hide the nav menu for mobile */
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hotel-card {
+        width: 100%; /* Stack the hotel cards in mobile view */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .hotel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hotels h2, #booking h2 {
+        font-size: 2rem;
+    }
+
+    footer .socials a {
+        font-size: 1.2rem;
+    }
+}
+/* Hamburger Icon Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hide the navigation menu for mobile and show hamburger */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 15px;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Animation for the hamburger menu when it's clicked (optional) */
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}

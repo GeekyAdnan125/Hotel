@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+    <header>
+       <!-- Nav-bar -->
+        <h1><i class="fas fa-hotel"></i>Hotel Paradise</h1>
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#hotels">Hotels</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="overlay">
+            <h2>Welcome to Hotel Paradise</h2>
+            <p>Find your perfect stay with us</p>
+            <button onclick="scrollToBooking()">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Featured Hotels -->
+    <section id="hotels">
+        <h2>Our Hotels</h2>
+        <div class="hotel-container">
+            <div class="hotel-card">
+                <img src="https://plus.unsplash.com/premium_photo-1661923725782-f73c990fbddf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bHV4dXJ5JTIwaG90ZWx8ZW58MHwwfDB8fHww" alt="Luxury Hotel">
+                <h3>Luxury Hotel</h3>
+                <p>Experience ultimate luxury and comfort in the heart of the city.</p>
+                <button class="hotel-btn">View Details</button>
+            </div>
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1723119832675-0031e0f0408c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGx1eHVyeSUyMGhvdGVsfGVufDB8MHwwfHx8MA%3D%3D" alt="Cozy Retreat">
+                <h3>Cozy Retreat</h3>
+                <p>Enjoy a peaceful retreat surrounded by nature.</p>
+                <button class="hotel-btn">View Details</button>
+            </div>
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1672708484804-1f288bb22733?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beachfront Hotel">
+                <h3>Beachfront Hotel</h3>
+                <p>Relax with stunning beachfront views and activities.</p>
+                <button class="hotel-btn">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+        <h2>Book Your Stay</h2>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="hotel">Select Hotel:</label>
+            <select id="hotel" name="hotel">
+                <option value="Luxury Hotel">Luxury Hotel</option>
+                <option value="Cozy Retreat">Cozy Retreat</option>
+                <option value="Beachfront Hotel">Beachfront Hotel</option>
+            </select>
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Hotel Paradise. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p> Contact us : +91 8292986414</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
